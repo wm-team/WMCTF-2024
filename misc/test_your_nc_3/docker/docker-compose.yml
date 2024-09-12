@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  test_your_nc_2:
+    image: wmctf2024/test_your_nc_2
+    build: .
+    ports:
+      - 9999:9999
+    restart: unless-stopped
