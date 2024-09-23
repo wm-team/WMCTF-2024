@@ -1,0 +1,1 @@
+flag = b"WMCTF{Wh@T_A_bAd_C0nStr4cT1oN_471dca162006184}"

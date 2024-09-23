@@ -1,0 +1,1 @@
+flag=b'flag{Th3_Simultaneous_Diophantine_Approximation_Approach}'

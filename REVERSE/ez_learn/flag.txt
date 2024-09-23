@@ -1,0 +1,3 @@
+WMCTF{CRC32andAnti_IS_SO_EASY!!}
+
+flag长度：32
