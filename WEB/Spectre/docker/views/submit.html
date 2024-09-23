@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <link rel="stylesheet" href="/spectre.min.css" nonce="{{ nonce }}">
+    <link rel="stylesheet" href="/dist/code-view.bundle.css" nonce="{{ nonce }}">
+    <script type="text/javascript" src="/dist/code-view.bundle.js" nonce="{{ nonce }}"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero hero-sm text-center">
+            <h2 class="text-bold">Submit Your Code</h2>
+            <p><span>Hello, {{ username }}</span></p>
+            <div class="btn-group title-btn">
+                <button class="btn btn-sm" name="list">Submissions</button>
+                <button class="btn btn-sm" name="logout">Logout</button>
+            </div>
+        </div>
+        <pre class="type-box code" data-lang="HTML"><code id="typearea" contenteditable="true">{{ code }}</code></pre>
+        <div class="width-100">
+            <button name="submit" class="btn btn-primary btn-wide" type="button">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>

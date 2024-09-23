@@ -1,0 +1,20 @@
+@import url('./src/common.scss');
+
+.main {
+    margin: 2rem auto 1rem;
+}
+
+.title-btn {
+    width: max-content;
+    margin: 0 auto;
+}
+
+:root {
+    --progress-countdown-total: 30;
+    --progress-count: 0;
+}
+
+#progress {
+    width: calc(100% / var(--progress-countdown-total) * var(--progress-count));
+    transition: width 1s linear;
+}

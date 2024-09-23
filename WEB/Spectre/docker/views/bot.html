@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot</title>
+    <link rel="stylesheet" href="/spectre.min.css" nonce="{{ nonce }}">
+    <link rel="stylesheet" href="/dist/bot.bundle.css" nonce="{{ nonce }}">
+    <script type="text/javascript" src="/dist/bot.bundle.js" nonce="{{ nonce }}"></script>
+    <script type="text/javascript" src="https://challenges.cloudflare.com/turnstile/v0/api.js" crossorigin defer
+        nonce="{{ nonce }}"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero hero-sm text-center">
+            <h2 class="text-bold">Commit your code</h2>
+            <p><span>Hello, {{ username }}. Bot will visit the link you commit.</span></p>
+            <div class="btn-group title-btn">
+                <button class="btn btn-sm" name="create-new">Create new</button>
+                <button class="btn btn-sm" name="list">Submissions</button>
+                <button class="btn btn-sm" name="logout">Logout</button>
+            </div>
+        </div>
+        <div class="bar bar-sm width-100">
+            <div class="bar-item" id="progress"></div>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-lg" name="url-prefix">{{ prefix }}</span>
+            <input class="form-input input-lg" type="text" placeholder="UUID"
+                pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" name="uuid"
+                required>
+        </div>
+        <div class="popover popover-bottom width-100" data-captcha="{{ captcha }}">
+            <div class="width-100">
+                <button name="commit-bot" class="btn btn-primary btn-wide" type="button">Commit</button>
+            </div>
+            {{ #if (captcha) }}
+            <div class="popover-container">
+                <div class="card width-max">
+                    <div class="card-header">
+                        <span class="text-tiny">Please wait for the CAPTCHA being completed.</span>
+                    </div>
+                    <div class="card-body padding-top-0">
+                        <div class="cf-turnstile" data-sitekey="{{ site_key }}" data-theme="auto"></div>
+                    </div>
+                </div>
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+</body>
+
+</html>

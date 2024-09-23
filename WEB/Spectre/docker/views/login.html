@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="/spectre.min.css" nonce="{{ nonce }}">
+    <link rel="stylesheet" href="/dist/account.bundle.css" nonce="{{ nonce }}">
+    <script type="text/javascript" src="/dist/account.bundle.js" nonce="{{ nonce }}"></script>
+</head>
+
+<body>
+    <div class="div-bg"></div>
+    <div class="div-body">
+        <div class="account-bar" id="account-bar">
+            <div class="head" id="account-head">
+                <div class="title" id="account">
+                    <div class="nowrap">Login</div>
+                </div>
+                <div class="tips" id="account-tips"></div>
+            </div>
+            <form class="form-group" id="account" action="about:blank" target="invisible">
+                <label class="form-label input-title" for="username">Username</label>
+                <input class="form-input" id="username" type="text" name="username" maxlength="10"
+                    placeholder="3-10 charactors, only [a-zA-Z0-9_] allowed">
+                <label class="form-label input-title" for="password">Password</label>
+                <input class="form-input" id="password" type="password" name="password" maxlength="20"
+                    placeholder="6-20 charactors, only [a-zA-Z0-9_] allowed">
+                <label class="form-checkbox">
+                    <input id="remember-me" type="checkbox" name="remember-me" checked>
+                    <i class="form-icon"></i>Remember me
+                </label>
+                <div id="submit-box" class="width-100 align-right">
+                    <a class="btn btn-link sub-a-link" target="_self" href="/account/signup">Sign Up</a>
+                    <button class="btn btn-primary" id="submit" name="submit" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        <iframe name="invisible" class="none-display" title="none"></iframe>
+    </div>
+</body>
+
+</html>

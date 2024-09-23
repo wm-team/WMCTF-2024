@@ -1,0 +1,23 @@
+version: "3.7"
+name: spectre
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./config.mjs:/app/config.mjs
+    environment:
+      - FLAG=${FLAG}
+      - ENABLE_CF_TURNSTILE=${ENABLE_CF_TURNSTILE}
+      - CF_TURNSTILE_SITE_KEY=${CF_TURNSTILE_SITE_KEY}
+      - CF_TURNSTILE_SECRET_KEY=${CF_TURNSTILE_SECRET_KEY}
+
+  # use cloudflare tunnel
+  # if you do not use the cloudflare tunnel, comment out the following lines
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: ["tunnel", "run", "--token", "${CF_TUNNEL_TOKEN}"]
+    depends_on:
+      - web

@@ -1,0 +1,28 @@
+@import url("./src/common.scss");
+
+.main {
+    margin: 2rem auto 1rem;
+}
+
+.type-box code {
+    min-height: 20em;
+    cursor: text;
+    &::selection {
+        background-color: rgba(61, 170, 194, 0.25);
+    }
+}
+
+.title-btn {
+    width: max-content;
+    margin: 0 auto;
+}
+
+[contenteditable] {
+    &,
+    &:focus,
+    &:active,
+    &:focus-visible {
+        outline: 1px solid transparent;
+        border: 1px solid transparent;
+    }
+}
