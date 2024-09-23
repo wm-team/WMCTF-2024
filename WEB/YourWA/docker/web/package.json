@@ -1,0 +1,31 @@
+{
+  "name": "your-wa-frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.7.7",
+    "entities": "^5.0.0",
+    "markdown-it": "^14.1.0",
+    "vue": "^3.4.32"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.1",
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "highlight.js": "~11.8.0",
+    "sass": "^1.77.8",
+    "simple-code-editor": "^2.0.9",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.18.0",
+    "unplugin-element-plus": "^0.8.0",
+    "unplugin-icons": "^0.19.0",
+    "unplugin-vue-components": "^0.27.3",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
+  }
+}

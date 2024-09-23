@@ -1,0 +1,12 @@
+version: "3.7"
+name: yourwa
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    environment:
+      - FLAG=${FLAG}
+    # ports:
+    #   - "80:3031"
+

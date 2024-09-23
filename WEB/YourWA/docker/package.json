@@ -1,0 +1,22 @@
+{
+  "name": "your-wa",
+  "module": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch run index.ts",
+    "compile:linux": "gcc mkflag.c -o mkflag && gcc rmflag.c -o rmflag",
+    "compile:win": "gcc mkflag.c -o mkflag.exe -ladvapi32 && gcc rmflag.c -o rmflag.exe -ladvapi32"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/uuid": "^10.0.0",
+    "jszip": "^3.10.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module"
+}

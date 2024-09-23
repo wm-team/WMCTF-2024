@@ -1,0 +1,8 @@
+https://github.com/justcaliturner/simple-code-editor
+License: MIT (according to package.json)
+- components/CodeEditor.vue
+- components/CodeEditor/CopyCode.vue
+
+https://github.com/rburns/ansi-to-html
+License: MIT
+- scripts/ansihtml.ts
